@@ -1,6 +1,6 @@
 // import 'regenerator-runtime/runtime'
-import { connectStreamSource, disconnectStreamSource } from "@hotwired/turbo"
-import * as signalR from "@microsoft/signalr";
+import { connectStreamSource, disconnectStreamSource } from "turbo"
+import * as signalR from "signalr";
 
 class SignalRTurboStreamElement extends HTMLElement {
 

@@ -1,0 +1,76 @@
+header {
+  display: grid;
+  grid-template-columns: max-content auto;
+}
+
+header input {
+  display: none;
+}
+
+header span {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+header input:checked ~ span {
+  display: none;
+}
+
+header nav {
+  display: grid;
+  grid-column: 2;
+  grid-row: 1;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+}
+
+header input:checked ~ nav {
+  grid-column: 1;
+}
+
+header input:checked ~ nav ul:last-of-type {
+  grid-column: 1;
+}
+
+header li {
+  display: inline;
+}
+
+header input:checked ~ nav li {
+  display: block;
+}
+
+header label {
+  display: none;
+}
+
+header label {
+  justify-self: end;
+  font-size: 2rem;
+  line-height: 0.5em;
+  grid-column: 2;
+  grid-row: 1;
+  text-align: right;
+}
+
+header label:after {
+  content: "\2261";
+}
+
+header input:checked ~ label {
+  grid-column: 2;
+}
+
+@media (max-width: 600px) {
+  header label {
+    display: block;
+  }
+
+  header span {
+    display: block;
+  }
+
+  header input:not(:checked) ~ nav {
+    display: none;
+  }
+}

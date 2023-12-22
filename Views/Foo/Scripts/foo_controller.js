@@ -1,4 +1,4 @@
-import { Controller } from "/dist/node_modules/.vite/deps/@hotwired_stimulus.js"
+import { Controller } from "stimulus"
 
 export default class FooController extends Controller {
 

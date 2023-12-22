@@ -1,0 +1,49 @@
+/*
+  ==========
+  CSS Button 
+  ==========
+*/
+
+/*
+* #1E3323
+* #47594B
+* #1E3323
+* #728C78
+* #75BF86
+* */
+
+/*
+* #2D2D33
+* #3B3D52
+* #1C2EEA
+* #454A85
+* #3B45B8
+* */
+
+button, a[role="button"], .pagination li {
+  border-radius: var(--border-radius);
+  color: inherit;
+  color: var(--bg-color);
+  /* background-color: var(--primary-color); */
+  background-color: #3B45B8;
+  background-color: #75BF86;
+  border-style: solid;
+  border-color: whitesmoke;
+  border-width: 1px;
+  border-color: var(--border-color);
+  text-align: center;  
+
+  padding: var(--space-3xs) var(--space-l);
+  text-decoration: none;
+    cursor: pointer;
+
+  &[type='submit']:hover,
+  button:hover {
+    cursor: pointer;
+  }
+
+}
+
+a[role="button"] {
+  display: inline-block;
+}

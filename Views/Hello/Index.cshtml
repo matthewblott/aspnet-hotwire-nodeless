@@ -8,3 +8,12 @@
   <input data-hello-target="username" data-action="input->hello#usernameChange">
   <button data-action="click->hello#greet">Greet</button>
 </div>
+
+@section Scripts
+{
+  <script type="module">
+    import HelloController from '@Url.Content("~/hello-js/hello_controller.js")'
+    Stimulus.register("hello", HelloController)
+  </script>
+}
+

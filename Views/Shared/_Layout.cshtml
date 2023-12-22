@@ -5,9 +5,29 @@
 	<link rel="icon" type="image/svg+xml" href="~/img/vite.svg">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>@ViewData["Title"]</title>
-  <environment names="Staging,Production">
-    <link rel="stylesheet" asp-href-include="~/dist/assets/main-*.css" />
-  </environment>
+  <link rel="stylesheet" href="~/css/site.css" />
+  <script type="importmap">
+  {
+    "imports": {
+      "turbo": "@Url.Content("~/lib/@hotwired/turbo/dist/turbo.es2017-esm.js")",
+      "stimulus": "@Url.Content("~/lib/@hotwired/stimulus/dist/stimulus.js")",
+      "signalr": "@Url.Content("~/lib/@microsoft/signalr/dist/browser/signalr.js")"
+    }
+  }
+  </script>
+  <script type="module">
+    import * as Turbo from 'turbo'
+    import '@Url.Content("~/js/signalRTurboStreamElement.js")'
+    Turbo.session.drive = true
+    
+    import { Application } from "stimulus"
+    const application = Application.start();
+    window.Stimulus = application
+    
+    import HelloController from '@Url.Content("~/js/controllers/hello_controller.js")'
+    Stimulus.register("hello", HelloController)
+        
+  </script> 
 </head>
 <body>
   <header>
@@ -15,18 +35,12 @@
     <a asp-controller="Notes" asp-action="Index">Notes</a>
     <a asp-controller="Todos" asp-action="Index">Todos</a>
     <a asp-controller="Home" asp-action="About">About</a>
+    <span>Foo</span>
   </header>
   <main id="app">
     @RenderBody()
   </main>
 
-  <environment names="Development">
-    <script type="module" src="~/dist/@@vite/client"></script>
-    <script type="module" src="~/dist/js/main.js"></script>
-  </environment>
-  <environment names="Staging,Production">
-    <script type="module" asp-src-include="~/dist/assets/main-*.js"></script>
-  </environment>
   @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

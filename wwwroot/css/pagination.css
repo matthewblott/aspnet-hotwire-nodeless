@@ -1,0 +1,20 @@
+.pagination-container {
+  display: inline-block;
+
+  .pagination li {
+    display: inline;
+    border-radius: 0;
+    padding: 7px 12px;
+    border-left: none;
+  }
+
+  .pagination li:first-of-type {
+    border-bottom-left-radius: var(--border-radius);
+    border-top-left-radius: var(--border-radius);
+  }
+
+  .pagination li:last-of-type {
+    border-bottom-right-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+  }
+}

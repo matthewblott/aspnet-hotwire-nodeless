@@ -1,0 +1,10 @@
+/*
+  ==============
+  CSS Validation
+  ==============
+*/
+
+error, .field-validation-error {
+  color: red;
+  font-size: 0.8em;
+}
