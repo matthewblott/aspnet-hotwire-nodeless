@@ -1,4 +1,4 @@
-namespace aspnet_hotwire.Services;
+namespace aspnet_hotwire_nodeless.Services;
 
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Abstractions;

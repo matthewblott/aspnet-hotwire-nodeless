@@ -7,4 +7,7 @@
   <ItemGroup>
     <_ContentIncludedByDefault Remove="wwwroot\old_css\style.css" />
   </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Westwind.AspNetCore.LiveReload" Version="0.5.0" />
+  </ItemGroup>
 </Project>

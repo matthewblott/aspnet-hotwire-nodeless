@@ -1,8 +1,7 @@
-using Microsoft.AspNetCore.Mvc;
-
-namespace aspnet_hotwire.MVC.Controllers;
+namespace aspnet_hotwire_nodeless.Controllers;
 
 using Data;
+using Microsoft.AspNetCore.Mvc;
 
 public class NotesController : Controller
 {

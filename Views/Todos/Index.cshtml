@@ -1,6 +1,5 @@
-@using aspnet_hotwire.Data
-@using aspnet_hotwire.Hubs
-
+@using aspnet_hotwire_nodeless.Data
+@using aspnet_hotwire_nodeless.Hubs
 <signalr-turbo-stream hub=@($"/{nameof(AppHub)}") method="TodosChanged"></signalr-turbo-stream>
 
 <div>

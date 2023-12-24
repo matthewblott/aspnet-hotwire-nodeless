@@ -1,6 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿namespace aspnet_hotwire_nodeless.Controllers;
 
-namespace aspnet_hotwire.MVC.Controllers;
+using Microsoft.AspNetCore.Mvc;
 
 public class HomeController : Controller
 {

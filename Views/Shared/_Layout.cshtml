@@ -10,23 +10,20 @@
   {
     "imports": {
       "turbo": "@Url.Content("~/lib/@hotwired/turbo/dist/turbo.es2017-esm.js")",
-      "stimulus": "@Url.Content("~/lib/@hotwired/stimulus/dist/stimulus.js")",
-      "signalr": "@Url.Content("~/lib/@microsoft/signalr/dist/browser/signalr.js")"
+      "stimulus": "@Url.Content("~/lib/@hotwired/stimulus/dist/stimulus.js")"
     }
   }
   </script>
+  <script src="~/lib/@@microsoft/signalr/dist/browser/signalr.js"></script>
   <script type="module">
     import * as Turbo from 'turbo'
-    import '@Url.Content("~/js/signalRTurboStreamElement.js")'
     Turbo.session.drive = true
-    
     import { Application } from "stimulus"
-    const application = Application.start();
+    const application = Application.start()
     window.Stimulus = application
-    
-    import HelloController from '@Url.Content("~/js/controllers/hello_controller.js")'
-    Stimulus.register("hello", HelloController)
         
+    import '@Url.Content("./js/signalRTurboStreamElement.js")'
+    
   </script> 
 </head>
 <body>

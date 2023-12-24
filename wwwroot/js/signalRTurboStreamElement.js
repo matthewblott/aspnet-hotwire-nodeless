@@ -1,6 +1,4 @@
-// import 'regenerator-runtime/runtime'
 import { connectStreamSource, disconnectStreamSource } from "turbo"
-import * as signalR from "signalr";
 
 class SignalRTurboStreamElement extends HTMLElement {
 

@@ -1,4 +1,4 @@
-namespace aspnet_hotwire.Data;
+namespace aspnet_hotwire_nodeless.Data;
 
 public class Todo
 {
