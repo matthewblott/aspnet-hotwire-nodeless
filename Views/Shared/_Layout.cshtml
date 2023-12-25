@@ -9,20 +9,20 @@
   <script type="importmap">
   {
     "imports": {
-      "turbo": "@Url.Content("~/lib/@hotwired/turbo/dist/turbo.es2017-esm.js")",
-      "stimulus": "@Url.Content("~/lib/@hotwired/stimulus/dist/stimulus.js")"
+      "turbo": "@Url.Content("~/js/lib/@hotwired/turbo/dist/turbo.es2017-esm.js")",
+      "stimulus": "@Url.Content("~/js/lib/@hotwired/stimulus/dist/stimulus.js")"
     }
   }
   </script>
-  <script src="~/lib/@@microsoft/signalr/dist/browser/signalr.js"></script>
+  <script src="~/js/lib/@@microsoft/signalr/dist/browser/signalr.js"></script>
   <script type="module">
     import * as Turbo from 'turbo'
-    Turbo.session.drive = true
     import { Application } from "stimulus"
-    const application = Application.start()
-    window.Stimulus = application
-        
     import '@Url.Content("./js/signalRTurboStreamElement.js")'
+    
+    Turbo.session.drive = true
+    
+    window.Stimulus = Application.start()
     
   </script> 
 </head>
@@ -31,8 +31,8 @@
     <a asp-controller="Home" asp-action="Index">Home</a>
     <a asp-controller="Notes" asp-action="Index">Notes</a>
     <a asp-controller="Todos" asp-action="Index">Todos</a>
+    <a asp-controller="Foo" asp-action="Index">Foo</a>
     <a asp-controller="Home" asp-action="About">About</a>
-    <span>Foo</span>
   </header>
   <main id="app">
     @RenderBody()

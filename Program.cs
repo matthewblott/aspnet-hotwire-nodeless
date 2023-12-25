@@ -18,19 +18,19 @@ builder.Services.AddSignalR();
 
 var app = builder.Build();
 
-  app.UseLiveReload();
+app.UseLiveReload();
 app.UseStaticFiles();
 app.UseStaticFiles(new StaticFileOptions
 {
   FileProvider = new PhysicalFileProvider(
-    Path.Combine(builder.Environment.ContentRootPath, "Views", "Foo", "Scripts")),
-    RequestPath = "/foo-js"
+    Path.Combine(builder.Environment.ContentRootPath, "Views", "Foo", "js")),
+    RequestPath = "/js"
 });
 app.UseStaticFiles(new StaticFileOptions
 {
   FileProvider = new PhysicalFileProvider(
-    Path.Combine(builder.Environment.ContentRootPath, "Views", "Hello", "Scripts")),
-    RequestPath = "/hello-js"
+    Path.Combine(builder.Environment.ContentRootPath, "Views", "Hello", "js")),
+    RequestPath = "/js"
 });
 
 app.UseRouting();
